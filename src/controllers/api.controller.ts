@@ -13,8 +13,11 @@ export class ApiController {
     }
 
     private isPalindrome(word: string) {
+        // Remover todos os espaços em branco e forçar a string para minúsculas
         word = word.toLowerCase().replace(/\s/g, '');
+        // Converte a string para Unicode e remove os acentos
         word = word.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        // Remove todos os caracteres especiais
         word = word.replace(/[^a-zA-Z0-9]/g, '');
         const length = word.length;
         const half = Math.floor(length / 2);
