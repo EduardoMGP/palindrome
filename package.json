@@ -1,0 +1,24 @@
+{
+  "name": "palindrome",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/**/* dist && copy public/**/* dist/public && copy views/**/* dist/views"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "ejs": "3.1.7",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.5",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
